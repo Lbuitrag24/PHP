@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Lista de Roles</title>
+</head>
+<body>
+<h1>Lista de Roles</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre del Rol</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="rol : ${roles}">
+        <td th:text="${rol.id}"></td>
+        <td th:text="${rol.nombre}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
